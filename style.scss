@@ -47,6 +47,7 @@
 
   h1 {
     text-align: center;
+    font-size: 2.5em;
     margin-bottom: 1em;
     color: var(--primary-color);
   }
@@ -58,26 +59,79 @@
     li {
       display: inline-table;
       text-align: center;
-      list-style-type: none;
       position: relative;
       padding: 10px 2px;
+      font-size: 1em;
 
       a {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         min-width: 10em;
         width: 10em;
         min-height: 3em;
         border: 1px solid var(--border-color);
-        padding: 4px;
-        display: inline-grid;
+        padding: 1.2em 0.5em;
         text-decoration: none;
         border-radius: 3px;
         transition: 0.2s background-color, 0.2s color, 0.2s border;
         background-color: var(--bg-global);
         color: var(--text-dark);
         cursor: pointer;
+        position: relative;
+        font-size: 1em;
 
+        & + .wrapper {
+          position: relative;
+
+          & .items {
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+          }
+
+          input[type='checkbox'] {
+            appearance: none;
+
+            & + label {
+              position: absolute;
+              top: -1.4em;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 2.6em;
+              height: 2.6em;
+              background-color: var(--text-white);
+              border: 1px solid var(--border-color);
+              border-radius: 50%;
+              z-index: 20;
+
+              &::before {
+                content: '➕';
+                position: absolute;
+                top: 0.55em;
+                left: 0.65em;
+                font-size: 1em;
+                z-index: 30;
+                transition: 0.2s transform;
+              }
+            }
+
+            &:checked {
+              & ~ .items {
+                visibility: visible;
+                opacity: 1;
+                display: block;
+              }
+
+              & + label {
+                &::before {
+                  transform: rotateZ(45deg);
+                }
+              }
+            }
+          }
+        }
         &:hover {
           background-color: var(--secondary-color) !important;
           color: var(--primary-color) !important;
@@ -86,7 +140,7 @@
 
           & + ul,
           & + ul ul,
-          & + .items {
+          & + .wrapper > .items {
             li,
             & > div {
               a {
