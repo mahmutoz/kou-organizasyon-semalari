@@ -59,6 +59,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 10px;
   position: relative;
 }
@@ -67,8 +70,103 @@
   display: inline-table;
   text-align: center;
   position: relative;
-  padding: 10px 2px;
-  font-size: 1em;
+  padding: 10px 1.5px;
+}
+
+.chart-container ul li .line,
+.chart-container ul li .line-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  height: 31em;
+}
+
+.chart-container ul li .line .right-side,
+.chart-container ul li .line .left-side,
+.chart-container ul li .line-2 .right-side,
+.chart-container ul li .line-2 .left-side {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 1em;
+}
+
+.chart-container ul li .line .right-side ul,
+.chart-container ul li .line .left-side ul,
+.chart-container ul li .line-2 .right-side ul,
+.chart-container ul li .line-2 .left-side ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chart-container ul li .line .right-side ul li a,
+.chart-container ul li .line .left-side ul li a,
+.chart-container ul li .line-2 .right-side ul li a,
+.chart-container ul li .line-2 .left-side ul li a {
+  min-height: 3em;
+  height: 1em;
+}
+
+.chart-container ul li .line .right-side ul li .items,
+.chart-container ul li .line .left-side ul li .items,
+.chart-container ul li .line-2 .right-side ul li .items,
+.chart-container ul li .line-2 .left-side ul li .items {
+  display: block;
+}
+
+.chart-container ul li .line .right-side ul li .items a,
+.chart-container ul li .line .left-side ul li .items a,
+.chart-container ul li .line-2 .right-side ul li .items a,
+.chart-container ul li .line-2 .left-side ul li .items a {
+  min-height: 1em;
+  height: 1em;
+}
+
+.chart-container ul li .line .right-side ul::after,
+.chart-container ul li .line .left-side ul::after,
+.chart-container ul li .line-2 .right-side ul::after,
+.chart-container ul li .line-2 .left-side ul::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 0;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 1px;
+}
+
+.chart-container ul li .line .right-side ul::after,
+.chart-container ul li .line-2 .right-side ul::after {
+  right: 50%;
+}
+
+.chart-container ul li .line::before,
+.chart-container ul li .line-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 31em;
+  border-right: 1px solid #ccc;
+}
+
+.chart-container ul li .line-2 {
+  height: 50em;
+}
+
+.chart-container ul li .line-2::before {
+  height: 50em;
 }
 
 .chart-container ul li a {
@@ -160,34 +258,62 @@
   text-decoration: underline;
 }
 
-.chart-container ul li a:hover + ul li a,
-.chart-container ul li a:hover + ul > div a,
-.chart-container ul li a:hover + ul ul li a,
-.chart-container ul li a:hover + ul ul > div a,
 .chart-container ul li a:hover + .wrapper > .items li a,
-.chart-container ul li a:hover + .wrapper > .items > div a {
+.chart-container ul li a:hover + .wrapper > .items > div a,
+.chart-container ul li a:hover + .line li a,
+.chart-container ul li a:hover + .line > div a,
+.chart-container ul li a:hover ~ .line + ul li a,
+.chart-container ul li a:hover ~ .line + ul > div a,
+.chart-container ul li a:hover + .line-2 li a,
+.chart-container ul li a:hover + .line-2 > div a,
+.chart-container ul li a:hover ~ .line-2 + ul li a,
+.chart-container ul li a:hover ~ .line-2 + ul > div a {
   background-color: var(--secondary-color) !important;
   color: var(--text-dark) !important;
   border: 1px solid var(--secondary-color);
 }
 
-.chart-container ul li a:hover + ul li::after, .chart-container ul li a:hover + ul li::before,
-.chart-container ul li a:hover + ul > div::after,
-.chart-container ul li a:hover + ul > div::before,
-.chart-container ul li a:hover + ul ul li::after,
-.chart-container ul li a:hover + ul ul li::before,
-.chart-container ul li a:hover + ul ul > div::after,
-.chart-container ul li a:hover + ul ul > div::before,
-.chart-container ul li a:hover + .wrapper > .items li::after,
-.chart-container ul li a:hover + .wrapper > .items li::before,
+.chart-container ul li a:hover + .wrapper > .items li::after, .chart-container ul li a:hover + .wrapper > .items li::before,
 .chart-container ul li a:hover + .wrapper > .items > div::after,
-.chart-container ul li a:hover + .wrapper > .items > div::before {
+.chart-container ul li a:hover + .wrapper > .items > div::before,
+.chart-container ul li a:hover + .line li::after,
+.chart-container ul li a:hover + .line li::before,
+.chart-container ul li a:hover + .line > div::after,
+.chart-container ul li a:hover + .line > div::before,
+.chart-container ul li a:hover ~ .line + ul li::after,
+.chart-container ul li a:hover ~ .line + ul li::before,
+.chart-container ul li a:hover ~ .line + ul > div::after,
+.chart-container ul li a:hover ~ .line + ul > div::before,
+.chart-container ul li a:hover + .line-2 li::after,
+.chart-container ul li a:hover + .line-2 li::before,
+.chart-container ul li a:hover + .line-2 > div::after,
+.chart-container ul li a:hover + .line-2 > div::before,
+.chart-container ul li a:hover ~ .line-2 + ul li::after,
+.chart-container ul li a:hover ~ .line-2 + ul li::before,
+.chart-container ul li a:hover ~ .line-2 + ul > div::after,
+.chart-container ul li a:hover ~ .line-2 + ul > div::before {
   border-color: var(--primary-color);
 }
 
-.chart-container ul li a:hover + ul::before,
-.chart-container ul li a:hover + ul ul::before,
-.chart-container ul li a:hover + .wrapper > .items::before {
+.chart-container ul li a:hover + .wrapper > .items::before,
+.chart-container ul li a:hover + .line::before,
+.chart-container ul li a:hover ~ .line + ul::before,
+.chart-container ul li a:hover + .line-2::before,
+.chart-container ul li a:hover ~ .line-2 + ul::before {
+  border-color: var(--primary-color);
+}
+
+.chart-container ul li a:hover + .line ul::before, .chart-container ul li a:hover + .line ul::after,
+.chart-container ul li a:hover + .line-2 ul::before,
+.chart-container ul li a:hover + .line-2 ul::after,
+.chart-container ul li a:hover ~ ul .line-2 ul::before,
+.chart-container ul li a:hover ~ ul .line-2 ul::after {
+  border-color: var(--primary-color);
+}
+
+.chart-container ul li a:hover + .line::before,
+.chart-container ul li a:hover + .line-2::before,
+.chart-container ul li a:hover ~ ul .line-2::before {
   border-color: var(--primary-color);
 }
 
@@ -199,6 +325,11 @@
   -webkit-transition: 0.2s background-color, 0.2s color, 0.2s border;
   transition: 0.2s background-color, 0.2s color, 0.2s border;
   color: #555;
+}
+
+.chart-container ul li .items > div a:not(.large-box) {
+  min-height: 1em;
+  height: 1em;
 }
 
 .chart-container ul li .items > div::before {

@@ -53,6 +53,7 @@
   }
   ul {
     display: flex;
+    justify-content: center;
     padding-top: 10px;
     position: relative;
 
@@ -60,9 +61,76 @@
       display: inline-table;
       text-align: center;
       position: relative;
-      padding: 10px 2px;
-      font-size: 1em;
+      padding: 10px 1.5px;
 
+      .line,
+      .line-2 {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        margin: 0 auto;
+        width: 50%;
+        height: 31em;
+
+        .right-side,
+        .left-side {
+          flex: 1;
+          padding-top: 1em;
+          ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+              a {
+                min-height: 3em;
+                height: 1em;
+              }
+
+              .items {
+                display: block;
+                a {
+                  min-height: 1em;
+                  height: 1em;
+                }
+              }
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              right: 0;
+              left: auto;
+              top: 0;
+              border-top: 1px solid #ccc;
+              width: 50%;
+              height: 1px;
+            }
+          }
+        }
+
+        .right-side {
+          ul {
+            &::after {
+              right: 50%;
+            }
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 50%;
+          height: 31em;
+          border-right: 1px solid #ccc;
+        }
+      }
+
+      .line-2 {
+        height: 50em;
+        &::before {
+          height: 50em;
+        }
+      }
       a {
         display: inline-flex;
         align-items: center;
@@ -138,9 +206,11 @@
           border: 1px solid var(--secondary-color) !important;
           text-decoration: underline;
 
-          & + ul,
-          & + ul ul,
-          & + .wrapper > .items {
+          & + .wrapper > .items,
+          & + .line,
+          & ~ .line + ul,
+          & + .line-2,
+          & ~ .line-2 + ul {
             li,
             & > div {
               a {
@@ -151,6 +221,19 @@
 
               &::after,
               &::before {
+                border-color: var(--primary-color);
+              }
+            }
+            &::before {
+              border-color: var(--primary-color);
+            }
+          }
+          & + .line,
+          & + .line-2,
+          & ~ ul .line-2 {
+            ul {
+              &::before,
+              &::after {
                 border-color: var(--primary-color);
               }
             }
@@ -169,6 +252,11 @@
           border-radius: 3px;
           transition: 0.2s background-color, 0.2s color, 0.2s border;
           color: #555;
+
+          a:not(.large-box) {
+            min-height: 1em;
+            height: 1em;
+          }
 
           &::before {
             content: '';
