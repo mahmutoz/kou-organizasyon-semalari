@@ -497,7 +497,7 @@
                                     </li>
                                 </ul>
                                 <ul>
-                                    <li>
+                                    <li class="dropdown-1">
                                         <a class="bg-secondary" href="#" target="_blank">Strateji Geliştirme D.B</a>
                                         <div class="wrapper">
                                             <input type="checkbox" id="sg">
@@ -518,7 +518,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="dropdown-1">
                                         <a class="bg-secondary" href="#" target="_blank">İdari ve Mali İşler D.B.</a>
                                         <div class="wrapper">
                                             <input type="checkbox" id="imi">
@@ -539,7 +539,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="dropdown-1">
                                         <a class="bg-secondary" href="#" target="_blank">Personel D.B.</a>
                                         <div class="wrapper">
                                             <input type="checkbox" id="chart15">
@@ -572,7 +572,7 @@
                                     </li>
                                 </ul>
                                 <ul>
-                                    <li>
+                                    <li class="dropdown-1">
                                         <a class="bg-secondary" href="#" target="_blank">Yap. İşl. ve Tekn. D.B.</a>
                                         <div class="wrapper">
                                             <input type="checkbox" id="chart16">
@@ -584,7 +584,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="dropdown-2">
                                         <a class="bg-secondary" href="#" target="_blank">Öğrenci İşleri D.B.</a>
                                         <div class="wrapper">
                                             <input type="checkbox" id="chart17">
@@ -608,7 +608,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="dropdown-2">
                                         <a class="bg-secondary" href="#" target="_blank">Sağlık Kültür ve Spor D.B</a>
                                         <div class="wrapper">
                                             <input type="checkbox" id="chart18">
@@ -635,7 +635,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li class="dropdown-2">
                                         <a class="bg-secondary" href="#" target="_blank">Bilgi İşlem D.B.</a>
                                         <div class="wrapper">
                                             <input type="checkbox" id="chart19">
@@ -754,7 +754,7 @@
             // Zoom in / zoom out
             $("#chartMinus").on("click ", function(){
                 let size = parseInt($(".chart-container").css("font-size"));
-                if(size > 5)
+                if(size > 8)
                 $('.chart-container').css('font-size', --size);
             });
             $("#oneToOne").on("click ", function(){
@@ -762,7 +762,7 @@
             });
             $("#chartPlus").on("click ", function(){
                 let size = parseInt($(".chart-container").css("font-size"));
-                if(size < 25)
+                if(size < 20)
                 $('.chart-container').css('font-size', ++size);
             });
 
@@ -810,6 +810,22 @@
                 }
             })(jQuery);
             $('.chart-container').drags();
+            
+            // Line-2 Dropdown
+            $('.dropdown-1 input').change(function(e) {
+                var checked = $(":checked").length;
+                $('.line-2').addClass('h43');
+                if(checked == 0){
+                    $('.line-2').removeClass('h43 h52');
+                }
+            })
+            $('.dropdown-2 input').change(function(e) {
+                var checked = $(":checked").length;
+                $('.line-2').addClass('h52');
+                if(checked == 0){
+                    $('.line-2').removeClass('h43 h52');
+                }
+            })
         });
     </script>
 </body>

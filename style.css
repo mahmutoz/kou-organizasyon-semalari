@@ -30,17 +30,19 @@
   border: none;
   padding: 1em;
   background-color: var(--border-color);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
   border-radius: 3px;
 }
 
 .chart-buttons input:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .chart-container {
-  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   font-size: 10px;
   font-weight: 500;
@@ -51,7 +53,7 @@
 .chart-container h1 {
   text-align: center;
   font-size: 2.5em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   color: var(--primary-color);
 }
 
@@ -84,7 +86,9 @@
   position: relative;
   margin: 0 auto;
   width: 50%;
-  height: 31em;
+  height: 33em;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
 }
 
 .chart-container ul li .line .right-side,
@@ -157,16 +161,16 @@
   position: absolute;
   top: 0;
   left: 50%;
-  height: 31em;
+  height: 33em;
   border-right: 1px solid #ccc;
 }
 
 .chart-container ul li .line-2 {
-  height: 50em;
+  height: 20em;
 }
 
 .chart-container ul li .line-2::before {
-  height: 50em;
+  height: 20em;
 }
 
 .chart-container ul li a {
@@ -203,8 +207,6 @@
   visibility: hidden;
   opacity: 0;
   display: none;
-  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .chart-container ul li a + .wrapper input[type='checkbox'] {
@@ -322,8 +324,6 @@
   margin: 1em 0;
   text-decoration: none;
   border-radius: 3px;
-  -webkit-transition: 0.2s background-color, 0.2s color, 0.2s border;
-  transition: 0.2s background-color, 0.2s color, 0.2s border;
   color: #555;
 }
 
@@ -397,5 +397,25 @@
 .bg-secondary {
   border-top-width: 3px !important;
   border-top-color: var(--bg-secondary) !important;
+}
+
+.h43 {
+  height: 43em !important;
+}
+
+.h43::before {
+  height: 43em !important;
+  -webkit-transition: 0.2s height;
+  transition: 0.2s height;
+}
+
+.h52 {
+  height: 52em !important;
+}
+
+.h52::before {
+  height: 52em !important;
+  -webkit-transition: 0.2s height;
+  transition: 0.2s height;
 }
 /*# sourceMappingURL=style.css.map */
