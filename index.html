@@ -27,13 +27,22 @@
                         </ul>
                         <ul>
                             <li>
-                                <a class="bg-primary" href="#" target="_blank">REKTÖR YARDIMCISI <br> (Mali İdari)</a>
+                                <a class="bg-primary" href="#" target="_blank">REKTÖR YARDIMCISI <br>(Bilimsel Arş. Proj.)</a>
+                                <div class="wrapper">
+                                    <input type="checkbox" id="ry">
+                                    <label for="ry"></label>
+                                    <div class="items">
+                                        <div>
+                                            <a href="#" target="_blank">Kalite Koordinasyon Birimi</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
                                 <a class="bg-primary" href="#" target="_blank">REKTÖR YARDIMCISI <br>(Eğitim Öğretim)</a>
                             </li>
                             <li>
-                                <a class="bg-primary" href="#" target="_blank">REKTÖR YARDIMCISI <br>(Bilimsel Arş. Proj.)</a>
+                                <a class="bg-primary" href="#" target="_blank">REKTÖR YARDIMCISI <br> (Mali İdari)</a>
                             </li>
                         </ul>
                     </div>
@@ -707,6 +716,9 @@
                                 </ul>
                             </li>
                             <li>
+                                <a class="bg-secondary" href="#" target="_blank">Koruma ve Güvenlik Şube Müdürlüğü</a>
+                            </li>
+                            <li>
                                 <a class="bg-secondary" href="#" target="_blank">Basın ve Halkla İlişkiler Ş. Müd.</a>
                                 <div class="wrapper">
                                     <input type="checkbox" id="chart21">
@@ -717,9 +729,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <a class="bg-secondary" href="#" target="_blank">Koruma ve Güvenlik Şube Müdürlüğü</a>
                             </li>
                             <li>
                                 <a class="bg-secondary" href="#" target="_blank">Sivil Savunma Uzmanlığı</a>
@@ -813,14 +822,14 @@
             
             // Line-2 Dropdown
             $('.dropdown-1 input').change(function(e) {
-                var checked = $(":checked").length;
+                var checked = $(".line-2 :checked").length;
                 $('.line-2').addClass('h43');
                 if(checked == 0){
                     $('.line-2').removeClass('h43 h52');
                 }
             })
             $('.dropdown-2 input').change(function(e) {
-                var checked = $(":checked").length;
+                var checked = $(".line-2 :checked").length;
                 $('.line-2').addClass('h52');
                 if(checked == 0){
                     $('.line-2').removeClass('h43 h52');
