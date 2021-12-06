@@ -87,8 +87,6 @@
   margin: 0 auto;
   width: 50%;
   height: 33em;
-  -webkit-transition: height 0.2s;
-  transition: height 0.2s;
 }
 
 .chart-container ul li .line .right-side,
@@ -405,8 +403,6 @@
 
 .h43::before {
   height: 43em !important;
-  -webkit-transition: 0.2s height;
-  transition: 0.2s height;
 }
 
 .h52 {
@@ -415,7 +411,5 @@
 
 .h52::before {
   height: 52em !important;
-  -webkit-transition: 0.2s height;
-  transition: 0.2s height;
 }
 /*# sourceMappingURL=style.css.map */
