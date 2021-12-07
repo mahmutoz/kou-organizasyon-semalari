@@ -256,6 +256,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .chart-container-db {
+    justify-content: flex-start;
+  }
+}
+
 .bg-primary {
   border-top-width: 0.3em !important;
   border-top-color: var(--bg-primary) !important;
