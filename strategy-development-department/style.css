@@ -29,6 +29,7 @@
   font-size: 13px;
   font-weight: 500;
   height: 100vh;
+  font-weight: 600;
 }
 
 .chart-container-db h1 {
@@ -179,6 +180,7 @@
   background-color: var(--secondary-color) !important;
   color: var(--text-dark) !important;
   border: 0.1em solid var(--secondary-color) !important;
+  border-top-width: 0.3em !important;
 }
 
 .chart-container-db ul li a:hover + .items li::after, .chart-container-db ul li a:hover + .items li::before,
@@ -240,7 +242,7 @@
   top: -2em;
   right: 50%;
   border-top: 2em solid var(--border-box);
-  width: 0.1em;
+  border-left: 0.1em solid var(--border-box);
   z-index: 10;
 }
 

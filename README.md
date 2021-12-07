@@ -13,3 +13,9 @@
 ### Strategy Development Department Chart
 
 ![](strategy-development-department/chart.png)
+
+<br>
+
+### Health Culture and Sports Department Chart
+
+![](health-culture-and-sports-department/chart.png)
