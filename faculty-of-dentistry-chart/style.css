@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  --color-dark: #000;
+  --color-red: #c0504d;
+  --color-green: #9bbb59;
+  --border-color: #bcbcbc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.chart-container-dentist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.chart-container-dentist h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--color-dark);
+}
+
+.chart-container-dentist ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1em;
+  position: relative;
+}
+
+.chart-container-dentist ul li {
+  display: inline-table;
+  text-align: center;
+  position: relative;
+  padding: 1em 2em;
+}
+
+.chart-container-dentist ul li .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  height: 5em;
+}
+
+.chart-container-dentist ul li .line .right-side,
+.chart-container-dentist ul li .line .left-side {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 1em;
+}
+
+.chart-container-dentist ul li .line .right-side ul,
+.chart-container-dentist ul li .line .left-side ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chart-container-dentist ul li .line .right-side ul::after,
+.chart-container-dentist ul li .line .left-side ul::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 0;
+  border-top: 4px solid var(--color-dark);
+  width: 50%;
+}
+
+.chart-container-dentist ul li .line .right-side ul::after {
+  right: 50%;
+}
+
+.chart-container-dentist ul li .line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 5em;
+  border-right: 4px solid var(--color-dark);
+}
+
+.chart-container-dentist ul li .vertical-line-red::before {
+  content: '';
+  position: absolute;
+  background-color: var(--color-red);
+}
+
+.chart-container-dentist ul li .vertical-line-red-1::before {
+  width: 4px;
+  height: 32.4em;
+  top: 6.5em;
+  right: 0;
+}
+
+.chart-container-dentist ul li .vertical-line-red-2::before {
+  width: 4px;
+  height: 57em;
+  top: 6.5em;
+  left: 0;
+}
+
+.chart-container-dentist ul li .vertical-line-red-3::before {
+  width: 63.74em;
+  height: 4px;
+  top: 6.5em;
+  left: 0;
+}
+
+.chart-container-dentist ul li .vertical-line-green::before {
+  content: '';
+  position: absolute;
+  background-color: var(--color-green);
+}
+
+.chart-container-dentist ul li .vertical-line-green-1::before {
+  width: 4px;
+  height: 36em;
+  top: 6.8em;
+  left: 0;
+}
+
+.chart-container-dentist ul li .vertical-line-green-2::before {
+  width: 11.5em;
+  height: 4px;
+  top: 6.4em;
+  left: 11em;
+}
+
+.chart-container-dentist ul li .short-line div::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 2.1em;
+  top: 50%;
+}
+
+.chart-container-dentist ul li .short-line-red-right div::after {
+  background-color: var(--color-red);
+  right: -2em;
+}
+
+.chart-container-dentist ul li .short-line-red-left div::after {
+  background-color: var(--color-red);
+  left: -2em;
+}
+
+.chart-container-dentist ul li .short-line-green-left div::after {
+  background-color: var(--color-green);
+  left: -2em;
+}
+
+.chart-container-dentist ul li .short-line-green-left-large::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 4em;
+  top: 50%;
+  background-color: var(--color-green);
+  left: -4.2em;
+}
+
+.chart-container-dentist ul li .short-line-bottom::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  left: 3em;
+}
+
+.chart-container-dentist ul li .short-line-bottom-red::after {
+  background-color: var(--color-red);
+  height: 1.3em;
+  bottom: -1.5em;
+}
+
+.chart-container-dentist ul li .short-line-bottom-green-1::after {
+  left: 11em;
+  background-color: var(--color-green);
+  height: 2.5em;
+  bottom: -2.7em;
+}
+
+.chart-container-dentist ul li .short-line-bottom-green-2::after {
+  background-color: var(--color-green);
+  height: 2.5em;
+  bottom: -2.7em;
+}
+
+.chart-container-dentist ul li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 14em;
+  width: 14em;
+  min-height: 3em;
+  border: 0.1em solid var(--color-dark);
+  padding: 0.5em;
+  text-decoration: none;
+  color: var(--color-dark);
+  cursor: pointer;
+  position: relative;
+}
+
+.chart-container-dentist ul li a.large-box {
+  max-width: 20em !important;
+  width: 20em !important;
+  min-height: 2em !important;
+}
+
+.chart-container-dentist ul li a.thick-border {
+  border: 0.2em solid var(--color-dark);
+}
+
+.chart-container-dentist ul li a:hover {
+  text-decoration: underline;
+}
+
+.chart-container-dentist ul li .items > div {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.chart-container-dentist ul li .items > div a {
+  border-bottom: none;
+}
+
+.chart-container-dentist ul li .items > div:first-child::before {
+  content: '';
+  position: absolute;
+  top: -2.5em;
+  right: 49%;
+  left: auto;
+  border-top: 2.5em solid var(--color-dark);
+  width: 4px;
+  z-index: 10;
+}
+
+.chart-container-dentist ul li .items > div:first-child {
+  margin-top: 2.5em;
+}
+
+.chart-container-dentist ul li .items > div:last-child a {
+  border-bottom: 0.1em solid var(--color-dark);
+}
+
+.chart-container-dentist ul li::before, .chart-container-dentist ul li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 4px solid var(--color-dark);
+  width: 51%;
+  height: 0.7em;
+}
+
+.chart-container-dentist ul li::after {
+  right: auto;
+  left: 50%;
+  border-left: 4px solid var(--color-dark);
+}
+
+.chart-container-dentist ul li:only-child {
+  padding-top: 0;
+}
+
+.chart-container-dentist ul li:only-child::before, .chart-container-dentist ul li:only-child::after {
+  display: none;
+}
+
+.chart-container-dentist ul li:first-child::before, .chart-container-dentist ul li:last-child::after {
+  border: 0 none;
+}
+
+.chart-container-dentist ul li:last-child::before {
+  border-right: 4px solid var(--color-dark);
+}
+
+.chart-container-dentist ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 4px solid var(--color-dark);
+  width: 0;
+  height: 1em;
+}
+
+.chart-container-dentist .info-box {
+  width: 20em;
+  height: 4.5em;
+  position: absolute;
+  top: 58em;
+  left: 23.8em;
+  border: 0.1em solid var(--border-color);
+  padding: 0.5em 0.8em;
+}
+
+.chart-container-dentist .info-box .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chart-container-dentist .info-box .info .color {
+  margin-left: 2em;
+  width: 3em;
+  height: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .chart-container-dentist {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/*# sourceMappingURL=style.css.map */
