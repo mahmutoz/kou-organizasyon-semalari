@@ -351,5 +351,8 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .info-box {
+    left: 4em !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
