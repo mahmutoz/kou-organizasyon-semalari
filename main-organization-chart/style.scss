@@ -41,10 +41,10 @@
 
 .chart-container {
   display: flex;
+  justify-content: center;
   position: relative;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
-  cursor: grab;
 
   h1 {
     text-align: center;
@@ -62,16 +62,15 @@
       display: inline-table;
       text-align: center;
       position: relative;
-      padding: 1em 0.15em;
+      padding: 1em 2em;
 
-      .line,
-      .line-2 {
+      .line {
         display: flex;
         justify-content: space-evenly;
         position: relative;
         margin: 0 auto;
-        width: 50%;
-        height: 33em;
+        width: 100%;
+        height: 32em;
 
         .right-side,
         .left-side {
@@ -81,20 +80,6 @@
             display: flex;
             justify-content: center;
 
-            li {
-              a {
-                min-height: 3em;
-                height: 1em;
-              }
-
-              .items {
-                display: block;
-                a {
-                  min-height: 1em;
-                  height: 1em;
-                }
-              }
-            }
             &::after {
               content: '';
               position: absolute;
@@ -121,15 +106,8 @@
           position: absolute;
           top: 0;
           left: 50%;
-          height: 33em;
+          height: 32em;
           border-right: 0.1em solid var(--border-box);
-        }
-      }
-
-      .line-2 {
-        height: 20em;
-        &::before {
-          height: 20em;
         }
       }
 
@@ -210,9 +188,7 @@
           }
           & + .wrapper > .items,
           & + .line,
-          & ~ .line + ul,
-          & + .line-2,
-          & ~ .line-2 + ul {
+          & ~ .line + ul {
             li,
             & > div {
               a {
@@ -230,9 +206,7 @@
               border-color: var(--primary-color);
             }
           }
-          & + .line,
-          & + .line-2,
-          & ~ ul .line-2 {
+          & + .line {
             ul {
               &::before,
               &::after {
@@ -253,11 +227,6 @@
           text-decoration: none;
           border-radius: 0.3em;
           color: var(--text-dark);
-
-          a:not(.large-box) {
-            min-height: 1em;
-            height: 1em;
-          }
 
           &::before {
             content: '';
@@ -337,16 +306,8 @@
   border-top-color: var(--bg-secondary) !important;
 }
 
-.h43 {
-  height: 43em !important;
-  &::before {
-    height: 43em !important;
-  }
-}
-
-.h52 {
-  height: 52em !important;
-  &::before {
-    height: 52em !important;
+@media (max-width: 768px) {
+  .chart-container {
+    justify-content: flex-start;
   }
 }

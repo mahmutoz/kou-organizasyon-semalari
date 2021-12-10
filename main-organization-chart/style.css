@@ -44,11 +44,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
-  cursor: -webkit-grab;
-  cursor: grab;
 }
 
 .chart-container h1 {
@@ -73,11 +74,10 @@
   display: inline-table;
   text-align: center;
   position: relative;
-  padding: 1em 0.15em;
+  padding: 1em 2em;
 }
 
-.chart-container ul li .line,
-.chart-container ul li .line-2 {
+.chart-container ul li .line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,14 +86,12 @@
           justify-content: space-evenly;
   position: relative;
   margin: 0 auto;
-  width: 50%;
-  height: 33em;
+  width: 100%;
+  height: 32em;
 }
 
 .chart-container ul li .line .right-side,
-.chart-container ul li .line .left-side,
-.chart-container ul li .line-2 .right-side,
-.chart-container ul li .line-2 .left-side {
+.chart-container ul li .line .left-side {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -101,9 +99,7 @@
 }
 
 .chart-container ul li .line .right-side ul,
-.chart-container ul li .line .left-side ul,
-.chart-container ul li .line-2 .right-side ul,
-.chart-container ul li .line-2 .left-side ul {
+.chart-container ul li .line .left-side ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,33 +108,8 @@
           justify-content: center;
 }
 
-.chart-container ul li .line .right-side ul li a,
-.chart-container ul li .line .left-side ul li a,
-.chart-container ul li .line-2 .right-side ul li a,
-.chart-container ul li .line-2 .left-side ul li a {
-  min-height: 3em;
-  height: 1em;
-}
-
-.chart-container ul li .line .right-side ul li .items,
-.chart-container ul li .line .left-side ul li .items,
-.chart-container ul li .line-2 .right-side ul li .items,
-.chart-container ul li .line-2 .left-side ul li .items {
-  display: block;
-}
-
-.chart-container ul li .line .right-side ul li .items a,
-.chart-container ul li .line .left-side ul li .items a,
-.chart-container ul li .line-2 .right-side ul li .items a,
-.chart-container ul li .line-2 .left-side ul li .items a {
-  min-height: 1em;
-  height: 1em;
-}
-
 .chart-container ul li .line .right-side ul::after,
-.chart-container ul li .line .left-side ul::after,
-.chart-container ul li .line-2 .right-side ul::after,
-.chart-container ul li .line-2 .left-side ul::after {
+.chart-container ul li .line .left-side ul::after {
   content: '';
   position: absolute;
   right: 0;
@@ -149,27 +120,17 @@
   height: 0.1em;
 }
 
-.chart-container ul li .line .right-side ul::after,
-.chart-container ul li .line-2 .right-side ul::after {
+.chart-container ul li .line .right-side ul::after {
   right: 50%;
 }
 
-.chart-container ul li .line::before,
-.chart-container ul li .line-2::before {
+.chart-container ul li .line::before {
   content: '';
   position: absolute;
   top: 0;
   left: 50%;
-  height: 33em;
+  height: 32em;
   border-right: 0.1em solid var(--border-box);
-}
-
-.chart-container ul li .line-2 {
-  height: 20em;
-}
-
-.chart-container ul li .line-2::before {
-  height: 20em;
 }
 
 .chart-container ul li a {
@@ -266,11 +227,7 @@
 .chart-container ul li a:hover + .line li a,
 .chart-container ul li a:hover + .line > div a,
 .chart-container ul li a:hover ~ .line + ul li a,
-.chart-container ul li a:hover ~ .line + ul > div a,
-.chart-container ul li a:hover + .line-2 li a,
-.chart-container ul li a:hover + .line-2 > div a,
-.chart-container ul li a:hover ~ .line-2 + ul li a,
-.chart-container ul li a:hover ~ .line-2 + ul > div a {
+.chart-container ul li a:hover ~ .line + ul > div a {
   background-color: var(--secondary-color) !important;
   color: var(--text-dark) !important;
   border: 0.1em solid var(--secondary-color);
@@ -286,37 +243,21 @@
 .chart-container ul li a:hover ~ .line + ul li::after,
 .chart-container ul li a:hover ~ .line + ul li::before,
 .chart-container ul li a:hover ~ .line + ul > div::after,
-.chart-container ul li a:hover ~ .line + ul > div::before,
-.chart-container ul li a:hover + .line-2 li::after,
-.chart-container ul li a:hover + .line-2 li::before,
-.chart-container ul li a:hover + .line-2 > div::after,
-.chart-container ul li a:hover + .line-2 > div::before,
-.chart-container ul li a:hover ~ .line-2 + ul li::after,
-.chart-container ul li a:hover ~ .line-2 + ul li::before,
-.chart-container ul li a:hover ~ .line-2 + ul > div::after,
-.chart-container ul li a:hover ~ .line-2 + ul > div::before {
+.chart-container ul li a:hover ~ .line + ul > div::before {
   border-color: var(--primary-color);
 }
 
 .chart-container ul li a:hover + .wrapper > .items::before,
 .chart-container ul li a:hover + .line::before,
-.chart-container ul li a:hover ~ .line + ul::before,
-.chart-container ul li a:hover + .line-2::before,
-.chart-container ul li a:hover ~ .line-2 + ul::before {
+.chart-container ul li a:hover ~ .line + ul::before {
   border-color: var(--primary-color);
 }
 
-.chart-container ul li a:hover + .line ul::before, .chart-container ul li a:hover + .line ul::after,
-.chart-container ul li a:hover + .line-2 ul::before,
-.chart-container ul li a:hover + .line-2 ul::after,
-.chart-container ul li a:hover ~ ul .line-2 ul::before,
-.chart-container ul li a:hover ~ ul .line-2 ul::after {
+.chart-container ul li a:hover + .line ul::before, .chart-container ul li a:hover + .line ul::after {
   border-color: var(--primary-color);
 }
 
-.chart-container ul li a:hover + .line::before,
-.chart-container ul li a:hover + .line-2::before,
-.chart-container ul li a:hover ~ ul .line-2::before {
+.chart-container ul li a:hover + .line::before {
   border-color: var(--primary-color);
 }
 
@@ -326,11 +267,6 @@
   text-decoration: none;
   border-radius: 0.3em;
   color: var(--text-dark);
-}
-
-.chart-container ul li .items > div a:not(.large-box) {
-  min-height: 1em;
-  height: 1em;
 }
 
 .chart-container ul li .items > div::before {
@@ -400,19 +336,11 @@
   border-top-color: var(--bg-secondary) !important;
 }
 
-.h43 {
-  height: 43em !important;
-}
-
-.h43::before {
-  height: 43em !important;
-}
-
-.h52 {
-  height: 52em !important;
-}
-
-.h52::before {
-  height: 52em !important;
+@media (max-width: 768px) {
+  .chart-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 /*# sourceMappingURL=style.css.map */
