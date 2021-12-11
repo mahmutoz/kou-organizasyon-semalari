@@ -52,17 +52,40 @@ html {
   color: var(--color-green);
 }
 
-.rectorluk-container table tr th.title-2 {
+.rectorluk-container table tr th a#gs {
+  position: relative;
+}
+
+.rectorluk-container table tr th a#gs::before {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid var(--color-blue);
+  bottom: -11px;
+  left: 50%;
+  width: 3em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.rectorluk-container table tr th.title-1, .rectorluk-container table tr th.title-2 {
   background-color: var(--secondary-color);
   text-align: left;
   padding-left: 1.5em;
 }
 
-.rectorluk-container table tr th.title-2 a {
+.rectorluk-container table tr th.title-1 a, .rectorluk-container table tr th.title-2 a {
   color: var(--color-green);
   border-bottom: 1px solid var(--color-green);
   font-weight: 700;
   font-size: 16px;
+}
+
+.rectorluk-container table tr th.title-1 {
+  text-align: center;
+}
+
+.rectorluk-container table tr th.title-1 a {
+  border-bottom: none;
 }
 
 .rectorluk-container table tr td {
@@ -75,9 +98,16 @@ html {
   padding: 0.5em 0;
 }
 
+.rectorluk-container table tr td ul li::marker,
+.rectorluk-container table tr td ol li::marker {
+  font-size: 14px;
+}
+
 .rectorluk-container table tr td ul li a,
 .rectorluk-container table tr td ol li a {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   margin: 0.2em 0;
   color: var(--color-blue);
   font-size: 15px;
@@ -87,6 +117,14 @@ html {
 .rectorluk-container table tr td ul li a:hover,
 .rectorluk-container table tr td ol li a:hover {
   text-decoration: underline;
+}
+
+.rectorluk-container table tr td ul.marker-short-line li::marker,
+.rectorluk-container table tr td ol.marker-short-line li::marker {
+  content: '-  ';
+  width: 5px;
+  height: 2px;
+  background-color: red;
 }
 
 @media (max-width: 992px) {
