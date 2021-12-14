@@ -41,12 +41,9 @@
 }
 
 .chart-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
+  margin: 0 auto;
+  min-width: 100%;
   position: relative;
   font-size: 14px;
   font-weight: 500;
@@ -120,6 +117,10 @@
   height: 0.1em;
 }
 
+.chart-container ul li .line .right-side ul li .no-link {
+  border-top: 0.3em solid var(--bg-primary);
+}
+
 .chart-container ul li .line .right-side ul::after {
   right: 50%;
 }
@@ -133,6 +134,7 @@
   border-right: 0.1em solid var(--border-box);
 }
 
+.chart-container ul li span,
 .chart-container ul li a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -157,22 +159,34 @@
   font-size: 1em;
 }
 
+.chart-container ul li span.no-link:hover,
+.chart-container ul li a.no-link:hover {
+  cursor: context-menu;
+  text-decoration: none;
+  background-color: var(--bg-global) !important;
+  border-color: var(--bg-global) !important;
+}
+
+.chart-container ul li span + .wrapper,
 .chart-container ul li a + .wrapper {
   position: relative;
 }
 
+.chart-container ul li span + .wrapper .items,
 .chart-container ul li a + .wrapper .items {
   visibility: hidden;
   opacity: 0;
   display: none;
 }
 
+.chart-container ul li span + .wrapper input[type='checkbox'],
 .chart-container ul li a + .wrapper input[type='checkbox'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 
+.chart-container ul li span + .wrapper input[type='checkbox'] + label,
 .chart-container ul li a + .wrapper input[type='checkbox'] + label {
   position: absolute;
   top: -1.4em;
@@ -187,6 +201,7 @@
   z-index: 20;
 }
 
+.chart-container ul li span + .wrapper input[type='checkbox'] + label::before,
 .chart-container ul li a + .wrapper input[type='checkbox'] + label::before {
   content: '➕';
   position: absolute;
@@ -200,40 +215,86 @@
   transition: 0.2s transform, 0.2s -webkit-transform;
 }
 
+.chart-container ul li span + .wrapper input[type='checkbox']:checked ~ .items,
 .chart-container ul li a + .wrapper input[type='checkbox']:checked ~ .items {
   visibility: visible;
   opacity: 1;
   display: block;
 }
 
+.chart-container ul li span + .wrapper input[type='checkbox']:checked + label::before,
 .chart-container ul li a + .wrapper input[type='checkbox']:checked + label::before {
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
 
+.chart-container ul li span:hover,
 .chart-container ul li a:hover {
   background-color: var(--secondary-color) !important;
   color: var(--primary-color) !important;
   border: 0.1em solid var(--secondary-color) !important;
   text-decoration: underline;
-}
-
-.chart-container ul li a:hover:not(.items) a {
   border-top-width: 0.3em !important;
 }
 
+.chart-container ul li span:hover + ul li a,
+.chart-container ul li span:hover + ul li .no-link,
+.chart-container ul li span:hover + ul > div a,
+.chart-container ul li span:hover + ul > div .no-link,
+.chart-container ul li span:hover + .wrapper > .items li a,
+.chart-container ul li span:hover + .wrapper > .items li .no-link,
+.chart-container ul li span:hover + .wrapper > .items > div a,
+.chart-container ul li span:hover + .wrapper > .items > div .no-link,
+.chart-container ul li span:hover + .line li a,
+.chart-container ul li span:hover + .line li .no-link,
+.chart-container ul li span:hover + .line > div a,
+.chart-container ul li span:hover + .line > div .no-link,
+.chart-container ul li span:hover ~ .line + ul li a,
+.chart-container ul li span:hover ~ .line + ul li .no-link,
+.chart-container ul li span:hover ~ .line + ul > div a,
+.chart-container ul li span:hover ~ .line + ul > div .no-link,
+.chart-container ul li a:hover + ul li a,
+.chart-container ul li a:hover + ul li .no-link,
+.chart-container ul li a:hover + ul > div a,
+.chart-container ul li a:hover + ul > div .no-link,
 .chart-container ul li a:hover + .wrapper > .items li a,
+.chart-container ul li a:hover + .wrapper > .items li .no-link,
 .chart-container ul li a:hover + .wrapper > .items > div a,
+.chart-container ul li a:hover + .wrapper > .items > div .no-link,
 .chart-container ul li a:hover + .line li a,
+.chart-container ul li a:hover + .line li .no-link,
 .chart-container ul li a:hover + .line > div a,
+.chart-container ul li a:hover + .line > div .no-link,
 .chart-container ul li a:hover ~ .line + ul li a,
-.chart-container ul li a:hover ~ .line + ul > div a {
+.chart-container ul li a:hover ~ .line + ul li .no-link,
+.chart-container ul li a:hover ~ .line + ul > div a,
+.chart-container ul li a:hover ~ .line + ul > div .no-link {
   background-color: var(--secondary-color) !important;
   color: var(--text-dark) !important;
   border: 0.1em solid var(--secondary-color);
 }
 
-.chart-container ul li a:hover + .wrapper > .items li::after, .chart-container ul li a:hover + .wrapper > .items li::before,
+.chart-container ul li span:hover + ul li::after, .chart-container ul li span:hover + ul li::before,
+.chart-container ul li span:hover + ul > div::after,
+.chart-container ul li span:hover + ul > div::before,
+.chart-container ul li span:hover + .wrapper > .items li::after,
+.chart-container ul li span:hover + .wrapper > .items li::before,
+.chart-container ul li span:hover + .wrapper > .items > div::after,
+.chart-container ul li span:hover + .wrapper > .items > div::before,
+.chart-container ul li span:hover + .line li::after,
+.chart-container ul li span:hover + .line li::before,
+.chart-container ul li span:hover + .line > div::after,
+.chart-container ul li span:hover + .line > div::before,
+.chart-container ul li span:hover ~ .line + ul li::after,
+.chart-container ul li span:hover ~ .line + ul li::before,
+.chart-container ul li span:hover ~ .line + ul > div::after,
+.chart-container ul li span:hover ~ .line + ul > div::before,
+.chart-container ul li a:hover + ul li::after,
+.chart-container ul li a:hover + ul li::before,
+.chart-container ul li a:hover + ul > div::after,
+.chart-container ul li a:hover + ul > div::before,
+.chart-container ul li a:hover + .wrapper > .items li::after,
+.chart-container ul li a:hover + .wrapper > .items li::before,
 .chart-container ul li a:hover + .wrapper > .items > div::after,
 .chart-container ul li a:hover + .wrapper > .items > div::before,
 .chart-container ul li a:hover + .line li::after,
@@ -247,16 +308,24 @@
   border-color: var(--primary-color);
 }
 
+.chart-container ul li span:hover + ul::before,
+.chart-container ul li span:hover + .wrapper > .items::before,
+.chart-container ul li span:hover + .line::before,
+.chart-container ul li span:hover ~ .line + ul::before,
+.chart-container ul li a:hover + ul::before,
 .chart-container ul li a:hover + .wrapper > .items::before,
 .chart-container ul li a:hover + .line::before,
 .chart-container ul li a:hover ~ .line + ul::before {
   border-color: var(--primary-color);
 }
 
-.chart-container ul li a:hover + .line ul::before, .chart-container ul li a:hover + .line ul::after {
+.chart-container ul li span:hover + .line ul::before, .chart-container ul li span:hover + .line ul::after,
+.chart-container ul li a:hover + .line ul::before,
+.chart-container ul li a:hover + .line ul::after {
   border-color: var(--primary-color);
 }
 
+.chart-container ul li span:hover + .line::before,
 .chart-container ul li a:hover + .line::before {
   border-color: var(--primary-color);
 }
@@ -267,6 +336,11 @@
   text-decoration: none;
   border-radius: 0.3em;
   color: var(--text-dark);
+}
+
+.chart-container ul li .items > div .no-link,
+.chart-container ul li .items > div a {
+  border-top-width: 0 !important;
 }
 
 .chart-container ul li .items > div::before {
@@ -336,11 +410,11 @@
   border-top-color: var(--bg-secondary) !important;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .chart-container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */

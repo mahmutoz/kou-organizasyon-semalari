@@ -40,8 +40,9 @@
 }
 
 .chart-container {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
+  min-width: 100%;
   position: relative;
   font-size: 14px;
   font-weight: 500;
@@ -95,6 +96,11 @@
 
         .right-side {
           ul {
+            li {
+              .no-link {
+                border-top: 0.3em solid var(--bg-primary);
+              }
+            }
             &::after {
               right: 50%;
             }
@@ -111,6 +117,7 @@
         }
       }
 
+      span,
       a {
         display: inline-flex;
         align-items: center;
@@ -127,6 +134,15 @@
         cursor: pointer;
         position: relative;
         font-size: 1em;
+
+        &.no-link {
+          &:hover {
+            cursor: context-menu;
+            text-decoration: none;
+            background-color: var(--bg-global) !important;
+            border-color: var(--bg-global) !important;
+          }
+        }
 
         & + .wrapper {
           position: relative;
@@ -183,15 +199,16 @@
           color: var(--primary-color) !important;
           border: 0.1em solid var(--secondary-color) !important;
           text-decoration: underline;
-          &:not(.items) a {
-            border-top-width: 0.3em !important;
-          }
+          border-top-width: 0.3em !important;
+
+          & + ul,
           & + .wrapper > .items,
           & + .line,
           & ~ .line + ul {
             li,
             & > div {
-              a {
+              a,
+              .no-link {
                 background-color: var(--secondary-color) !important;
                 color: var(--text-dark) !important;
                 border: 0.1em solid var(--secondary-color);
@@ -227,6 +244,11 @@
           text-decoration: none;
           border-radius: 0.3em;
           color: var(--text-dark);
+
+          .no-link,
+          a {
+            border-top-width: 0 !important;
+          }
 
           &::before {
             content: '';
@@ -306,8 +328,8 @@
   border-top-color: var(--bg-secondary) !important;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .chart-container {
-    justify-content: flex-start;
+    display: flex;
   }
 }
