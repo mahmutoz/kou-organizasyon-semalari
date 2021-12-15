@@ -14,6 +14,7 @@
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 html {
@@ -21,8 +22,6 @@ html {
 }
 
 .rectorluk-container {
-  scroll-behavior: smooth;
-
   display: block;
   padding: 2em;
   width: 60%;
@@ -40,6 +39,7 @@ html {
         padding: 0.5em 0;
         background-color: var(--primary-color);
 
+        span,
         a {
           font-size: 15px;
           font-weight: 600;
@@ -95,18 +95,23 @@ html {
           padding: 0.5em 0;
           li {
             &::marker {
-              font-size: 14px;
+              font-size: 15px;
+              color: var(--color-green);
             }
+
             a {
               display: inline-flex;
               margin: 0.2em 0;
               color: var(--color-blue);
-              font-size: 15px;
-              font-weight: 500;
 
               &:hover {
                 text-decoration: underline;
               }
+            }
+            span {
+              display: inline-flex;
+              padding: 0.2em 0;
+              color: var(--color-blue);
             }
           }
           &.marker-short-line {
@@ -125,7 +130,7 @@ html {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .rectorluk-container {
     width: 100%;
     padding: 1em;

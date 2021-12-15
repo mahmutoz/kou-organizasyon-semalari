@@ -15,8 +15,8 @@
 }
 
 .chart-container-dentist {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   position: relative;
   font-size: 12px;
   font-weight: 500;
@@ -347,8 +347,8 @@
     width: 20em;
     height: 4.5em;
     position: absolute;
-    top: 58em;
-    left: 23.8em;
+    top: 45em;
+    left: 2em;
     border: 0.1em solid var(--border-color);
     padding: 0.5em 0.8em;
 
@@ -366,11 +366,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
   .chart-container-dentist {
-    justify-content: flex-start;
-  }
-  .info-box {
-    left: 4em !important;
+    display: flex;
   }
 }

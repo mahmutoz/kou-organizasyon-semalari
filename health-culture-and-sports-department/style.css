@@ -19,12 +19,8 @@
 }
 
 .chart-container-sks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
+  margin: 0 auto;
   position: relative;
   font-size: 13px;
   font-weight: 500;
@@ -252,11 +248,11 @@
   height: 2em;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1920px) {
   .chart-container-sks {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

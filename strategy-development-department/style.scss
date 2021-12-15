@@ -20,8 +20,8 @@
 }
 
 .chart-container-db {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
   position: relative;
   font-size: 13px;
   font-weight: 500;
@@ -258,9 +258,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
   .chart-container-db {
-    justify-content: flex-start;
+    display: flex;
   }
 }
 
