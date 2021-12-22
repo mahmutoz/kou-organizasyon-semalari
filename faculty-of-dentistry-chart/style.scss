@@ -14,7 +14,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.chart-container-dentist {
+.chart-container {
   display: block;
   margin: 0 auto;
   position: relative;
@@ -367,7 +367,7 @@
 }
 
 @media only screen and (max-width: 1400px) {
-  .chart-container-dentist {
+  .chart-container {
     display: flex;
   }
 }
