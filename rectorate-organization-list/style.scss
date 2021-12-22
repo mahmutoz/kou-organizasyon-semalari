@@ -114,16 +114,6 @@ html {
               color: var(--color-blue);
             }
           }
-          &.marker-short-line {
-            li {
-              &::marker {
-                content: '-  ';
-                width: 5px;
-                height: 2px;
-                background-color: red;
-              }
-            }
-          }
         }
       }
     }
