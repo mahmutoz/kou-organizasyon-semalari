@@ -132,14 +132,6 @@ html {
   color: var(--color-blue);
 }
 
-.rectorluk-container table tr td ul.marker-short-line li::marker,
-.rectorluk-container table tr td ol.marker-short-line li::marker {
-  content: '-  ';
-  width: 5px;
-  height: 2px;
-  background-color: red;
-}
-
 @media (max-width: 1200px) {
   .rectorluk-container {
     width: 100%;
