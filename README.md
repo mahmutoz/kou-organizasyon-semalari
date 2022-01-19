@@ -4,36 +4,36 @@
 
 <br>
 
-### [Main Organization Chart](https://kou-organization-chart.netlify.app/main-organization-chart/index.html)
+### [Main Organization Chart](https://kou-organization-chart.netlify.app/kou-organizasyon-semasi/index.html)
 
-![](main-organization-chart/chart.png)
-
-<br>
-
-### [Strategy Development Department Chart](https://kou-organization-chart.netlify.app/strategy-development-department/index.html)
-
-![](strategy-development-department/chart.png)
+![](kou-organizasyon-semasi/chart.png)
 
 <br>
 
-### [Health Culture and Sports Department Chart](https://kou-organization-chart.netlify.app/health-culture-and-sports-department/index.html)
+### [Strategy Development Department Chart](https://kou-organization-chart.netlify.app/strateji-gelistirme-daire-baskanligi/index.html)
 
-![](health-culture-and-sports-department/chart.png)
-
-<br>
-
-### [Faculty Chart](https://kou-organization-chart.netlify.app/faculty/index.html)
-
-![](faculty/chart.png)
+![](strateji-gelistirme-daire-baskanligi/chart.png)
 
 <br>
 
-### [MYO Chart](https://kou-organization-chart.netlify.app/myo/index.html)
+### [Health Culture and Sports Department Chart](https://kou-organization-chart.netlify.app/saglik-kultur-ve-spor-daire-baskanligi/index.html)
+
+![](saglik-kultur-ve-spor-daire-baskanligi/chart.png)
+
+<br>
+
+### [Faculty Chart](https://kou-organization-chart.netlify.app/fakulteler/muhendislik-fakultesi/index.html)
+
+![](fakulteler/chart.png)
+
+<br>
+
+### [MYO Chart](https://kou-organization-chart.netlify.app/myo/kocaeli-meslek-yuksekokulu/index.html)
 
 ![](myo/chart.png)
 
 <br>
 
-### [Faculty of Dentistry Chart](https://kou-organization-chart.netlify.app/faculty-of-dentistry-chart/index.html)
+### [Faculty of Dentistry Chart](https://kou-organization-chart.netlify.app/dis-hekimligi-fakulte-semasi/index.html)
 
-![](faculty-of-dentistry-chart/chart.png)
+![](dis-hekimligi-fakulte-semasi/chart.png)
