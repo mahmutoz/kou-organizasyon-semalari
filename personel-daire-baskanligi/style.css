@@ -98,29 +98,29 @@
 }
 
 .chart-container ul li .line.line-tree {
-  height: 8em;
+  height: 15.5em;
 }
 
 .chart-container ul li .line.line-tree .left-side,
 .chart-container ul li .line.line-tree .right-side {
-  margin-right: 15em;
+  max-width: 19%;
 }
 
-.chart-container ul li .line.line-tree .left-side ul::after {
-  left: 58.8% !important;
-  width: 2em;
+.chart-container ul li .line.line-tree ul::after {
+  right: 0;
+  width: 1.1em;
 }
 
 .chart-container ul li .line.line-tree::before {
-  height: 9em;
+  height: 16.5em;
 }
 
 .chart-container ul li .line.line-1 {
-  height: 27.3em;
+  height: 11.8em;
 }
 
 .chart-container ul li .line.line-1::before {
-  height: 27.3em;
+  height: 11.8em;
 }
 
 .chart-container ul li .line.line-2 {

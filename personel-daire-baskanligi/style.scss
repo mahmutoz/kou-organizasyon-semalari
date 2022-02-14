@@ -76,31 +76,28 @@
         }
 
         &.line-tree {
-          height: 8em;
-
+          height: 15.5em;
           .left-side,
           .right-side {
-            margin-right: 15em;
+            max-width: 19%;
           }
 
-          .left-side {
-            ul {
-              &::after {
-                left: 59.2% !important;
-                width: 2em;
-              }
+          ul {
+            &::after {
+              right: 0;
+              width: 1.1em;
             }
           }
           &::before {
-            height: 9em;
+            height: 16.5em;
           }
         }
 
         &.line-1 {
-          height: 3.9em;
+          height: 11.8em;
 
           &::before {
-            height: 3.9em;
+            height: 11.8em;
           }
         }
 

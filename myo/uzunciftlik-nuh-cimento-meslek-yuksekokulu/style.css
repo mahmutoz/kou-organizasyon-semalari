@@ -107,7 +107,7 @@
 }
 
 .chart-container ul li .line.line-tree .left-side ul::after {
-  left: 60.1% !important;
+  left: 59.2% !important;
   width: 2em;
 }
 
@@ -341,4 +341,3 @@
   border-top-width: 0.3em !important;
   border-top-color: var(--bg-secondary) !important;
 }
-/*# sourceMappingURL=style.css.map */
